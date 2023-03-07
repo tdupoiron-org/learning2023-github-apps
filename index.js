@@ -1,3 +1,4 @@
+// ELASTIC
 const { Client } = require('@elastic/elasticsearch')
 
 const client = new Client({
@@ -10,26 +11,43 @@ const client = new Client({
   }
 })
 
-async function pushDocument() {
+async function pushDocument(issue) {
+
+  console.log("Pushing issue", issue.id);
 
     await client.index({
-        id: "1",
+        id: issue.id,
         index: "github-issues",
         body: {
-            repository: "testrepo",
-            id: "1",
-            title: "Test issue",
-            body: "This is a test issue",
-            creationDate: new Date(),
-            creationUser: "testuser",
-            status: "open",
-            tags: ["test", "javascript"],
-            closed: false,
-            nbOfComments: 0
+            issue
         }
     })
 
     await client.indices.refresh({index: 'github-issues'});
 }
 
-pushDocument().catch(console.log)
+// GITHUB
+const { Octokit } = require("@octokit/rest");
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN
+});
+
+async function getIssues() {
+  const issues = await octokit.issues.listForRepo({
+    owner: "tdupoiron",
+    repo: "sandbox"
+  });
+  return issues.data;
+}
+
+async function main() {
+  const issues = await getIssues();
+  
+  // for each issue, push it to elastic
+  for (const issue of issues) {
+    await pushDocument(issue);
+  }
+
+}
+
+main().catch(console.log);
