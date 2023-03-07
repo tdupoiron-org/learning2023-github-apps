@@ -34,8 +34,9 @@ const octokit = new Octokit({
 
 async function getIssues() {
   const issues = await octokit.issues.listForRepo({
-    owner: "tdupoiron",
-    repo: "sandbox"
+    owner: process.env.GITHUB_OWNER,
+    repo: process.env.GITHUB_REPO,
+    state: "all",
   });
   return issues.data;
 }
