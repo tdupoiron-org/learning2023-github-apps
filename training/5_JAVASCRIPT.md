@@ -179,3 +179,5 @@ Number of installations : 3
   - Pushing issue 1394359247
   - Pushing issue 1374591905
 ````
+
+Go to next section: [6. Kibana](6_KIBANA.md)

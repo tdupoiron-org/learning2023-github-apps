@@ -69,3 +69,5 @@ A service-to-service application will authenticate using the app as follow:
 3. Claim an access token for a given installation
 
 4. Use the access token to query the business operations
+
+Go to next section: [4 - Create a GitHub App](4_GITHUB_APP.md)

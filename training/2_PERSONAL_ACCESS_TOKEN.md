@@ -31,3 +31,5 @@ We are going to use [this operation](https://docs.github.com/en/rest/issues/issu
 <img width="594" alt="image" src="https://user-images.githubusercontent.com/7711190/223685995-36526845-2d10-4f37-9105-9ef6c6422f68.png">
 
 > Using REST test test is safe. Your token will **NOT** be transferred to the website.
+
+Go to next section: [3 - Register your GitHub App](3_GITHUB_APP.md)

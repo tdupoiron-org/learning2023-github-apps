@@ -50,3 +50,5 @@ ELASTIC_CLOUD_ID=learning-pills-mar-2023:ZXUtd2VzdC0zLmF3cy5lbGFzdGljLWNsb3VkLmN
 ```
 
 Your Codespace is ready 👍
+
+Go to next section: [5 - Explore and execute the Javascript code](5_JAVASCRIPT.md)
