@@ -23,6 +23,8 @@ ELASTIC_CLOUD_USERNAME = axa
 ELASTIC_CLOUD_PASSWORD = learning2023
 ```
 
+<img width="791" alt="image" src="https://user-images.githubusercontent.com/7711190/223704762-5ba51d2a-3481-4fab-bbd9-fdc81b893f5e.png">
+
 These secrets will be sent automatically to the Codespace environment through environment variables.
 It is a best practice to use GitHub secrets instead of having passwords hard-coded in the code.
 
