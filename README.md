@@ -68,18 +68,48 @@ var token = await octokit_app.apps.createInstallationAccessToken({
 
 ## github.js
 This module expose a `getAllIssues` operation to list all issues for a given access token, namespace and namespace type.
-Again, we are using the octokit functions to wrap the API endpoints.
+I'm using the GraphQL API to list repositories for user or organization depending on the namespace.
+
+Then I'm using the octokit library to read issues.
 
 ```
-// List repositories for user
-const repos = await octokit.repos.listForUser({
-    username: owner
-});
+// List repositories for a user via graphql api
+async function getReposForUserGraphQL(graphqlWithAuth, owner) {
+    
+    const query = `{
+        user(login: "${owner}") {
+          repositories(first: 100, affiliations: OWNER) {
+            nodes {
+              name
+              visibility
+            }
+          }
+        }
+      }`;
 
-// List repositories for organization
-const repos = await octokit.repos.listForOrg({
-    org: owner
-});
+    const repos = await graphqlWithAuth(query);
+
+    return repos.user.repositories.nodes;
+}
+
+// List repositories for an organization via graphql api
+async function getReposForOrgGraphQL(graphqlWithAuth, owner) {
+    
+    const query = `{
+        organization(login: "${owner}") {
+          repositories(first: 100, affiliations: OWNER) {
+            nodes {
+              name
+              visibility
+            }
+          }
+        }
+      }`;
+
+    const repos = await graphqlWithAuth(query);
+
+    return repos.organization.repositories.nodes;
+}
 
 // List issues
 const issues = await octokit.issues.listForRepo({
@@ -90,7 +120,7 @@ const issues = await octokit.issues.listForRepo({
 ```
 
 ## elastic.js
-Mirroring the GitHub modules, this file authenticate to Elastic Cloud and push Document into the github-issues indice.
+Mirroring the GitHub modules, this file authenticates to Elastic Cloud and push Document into the github-issues indice.
 
 ```
 const client = new Client({
@@ -125,15 +155,7 @@ Make sure you created your GitHub App before and declared the following secrets 
 * GITHUBAPP_APPID
 * GITHUBAPP_PRIVATEKEY
 
-Run the following commands in a terminal
-
-1. Install npm dependencies
-```
-npm update
-```
-
-2. Call the index.js file with node command
+Call the index.js file with node command to run the script
 ````
 node index.js
 ````
-
