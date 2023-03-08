@@ -146,9 +146,11 @@ Make sure you created your GitHub App before and declared the following secrets 
 * GITHUBAPP_PRIVATEKEY
 
 Call the index.js file with node command to run the script
-````
+```
 node index.js
+```
 
+```
 Number of installations : 3
 * Installation ID: 35020988
 * Owner: tdupoiron-org
