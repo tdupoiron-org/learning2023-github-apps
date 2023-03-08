@@ -29,7 +29,7 @@ async function getReposForOrg(octokit, owner) {
     return repos.data;
 }
 
-// For each repository, list issues
+// List issues
 async function getIssues(octokit, owner, repo) {
     const issues = await octokit.issues.listForRepo({
         owner: owner,
