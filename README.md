@@ -4,4 +4,4 @@
 
 ## [2 - Test the API using a Personal Access Token](training/2_PERSONAL_ACCESS_TOKEN.md)
 
-## [3 - GitHub App](training/2_GITHUB_APP.md)
+## [3 - GitHub App](training/3_GITHUB_APP.md)
