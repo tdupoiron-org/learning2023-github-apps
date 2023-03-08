@@ -1,5 +1,9 @@
 # learning2023-github-apps
 
+## 1 - Test the API using a Personal Access Token
+
+* Go to your personnal settings
+
 ## Preparation
 
 Click on "Use this template" and 'Create a new repository'
