@@ -93,7 +93,7 @@ async function getAllIssues(token, owner, type) {
     var issues = [];
 
     for (const repo of repos) {
-        console.log("Repo: " + repo.name + " (" + repo.visibility + ")");
+        console.log("  - Repo: " + repo.name + " (" + repo.visibility + ")");
         issues.push(...await getIssues(octokit, owner, repo.name));
     }
 

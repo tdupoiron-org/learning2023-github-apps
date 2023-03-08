@@ -7,10 +7,9 @@ async function main() {
   const install_tokens = await getInstallations();
 
   for (const install_token of install_tokens) {
-    console.log("Installation ID: " + install_token.installationId);
-    console.log("Owner: " + install_token.owner);
-    console.log("Access token: " + install_token.accessToken);
-    console.log("Type: " + install_token.type);
+    console.log("* Installation ID: " + install_token.installationId);
+    console.log("* Owner: " + install_token.owner);
+    console.log("* Type: " + install_token.type);
     
     const issues = await getAllIssues(install_token.accessToken, install_token.owner, install_token.type);
 

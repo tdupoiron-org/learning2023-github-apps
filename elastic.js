@@ -12,7 +12,7 @@ const client = new Client({
 
 async function pushDocument(issue) {
 
-  console.log("Pushing issue", issue.id);
+  console.log("  - Pushing issue", issue.id);
 
     await client.index({
         id: issue.id,

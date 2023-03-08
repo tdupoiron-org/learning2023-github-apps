@@ -11,22 +11,8 @@ const octokit_app = new Octokit({
     auth: {
         appId: appId,
         privateKey: signing_key,
-        //installationId: 35020148,
     },
 });
-
-// authenticates as app based on request URLs
-/*const octokit_auth = await octokit_app.rest.apps.getAuthenticated();
-  
-console.log(octokit_auth);
-
-  // creates an installation access token as needed
-  // assumes that installationId 123 belongs to @octocat, otherwise the request will fail
-  await octokit_app.rest.issues.create({
-    owner: "ndupoiron",
-    repo: "sandbox",
-    title: "Hello world from ",
-  });*/
 
 // STEP 2 : Use the JWT to get the app installations
 
@@ -34,7 +20,7 @@ async function getInstallations() {
 
     var installations = await octokit_app.apps.listInstallations();
 
-    console.log("Installations: " + installations.data);
+    console.log("Number of installations : " + installations.data.length);
 
     var install_tokens = [];
 
