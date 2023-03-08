@@ -14,7 +14,7 @@ async function getAuthenticatedUser(token) {
 
 export { getAuthenticatedUser }
 
-// List repositories for user via graphql api
+// List repositories for a user via graphql api
 async function getReposForUserGraphQL(graphqlWithAuth, owner) {
     
     const query = `{
@@ -33,7 +33,7 @@ async function getReposForUserGraphQL(graphqlWithAuth, owner) {
     return repos.user.repositories.nodes;
 }
 
-// List repositories for organization via graphql api
+// List repositories for an organization via graphql api
 async function getReposForOrgGraphQL(graphqlWithAuth, owner) {
     
     const query = `{
