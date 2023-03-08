@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tdupoiron/learning2023-github-apps#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^8.6.0",
+    "@octokit/auth-app": "^4.0.9",
     "@octokit/rest": "^19.0.7"
   },
   "type": "module"
