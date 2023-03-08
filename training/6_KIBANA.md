@@ -24,4 +24,5 @@ You should see your issue created earlier.
 <img width="962" alt="image" src="https://user-images.githubusercontent.com/7711190/223771529-ca41d827-2c99-4671-b709-30d0d5941377.png">
 
 Go ahead by creating new issues, changing the assignees or the tags, adding comments and closing it.
+
 Run the Javascript script again to see modifications in Kibana.
