@@ -12,15 +12,15 @@ It offers a Visual Studio instance with pre-installed plugins and binaries.
 * Create the following secrets
 
 ```
-GITHUBAPP_APPID = <app_id>
-
-GITHUBAPP_PRIVATE_KEY = <private_key>
-
 ELASTIC_CLOUD_ID = learning-pills-mar-2023:ZXUtd2VzdC0zLmF3cy5lbGFzdGljLWNsb3VkLmNvbTo0NDMkNzExZjIwYTdmYzRhNDY4YmIxOTIyYzU3ZDlkMDNjNWIkZTJhM2VmNGYyNDZkNDRmMDhiZGNhYTYyNDM3M2NlZmE=
 
 ELASTIC_CLOUD_USERNAME = axa
 
 ELASTIC_CLOUD_PASSWORD = learning2023
+
+GITHUBAPP_APPID = <app_id>
+
+GITHUBAPP_PRIVATE_KEY = <private_key>
 ```
 
 <img width="791" alt="image" src="https://user-images.githubusercontent.com/7711190/223704762-5ba51d2a-3481-4fab-bbd9-fdc81b893f5e.png">
