@@ -3,8 +3,8 @@
 import { Octokit } from "@octokit/rest";
 import { createAppAuth } from "@octokit/auth-app";
 
-const signing_key = process.env.DEMO_GITHUBAPP_PRIVATE_KEY;
-const appId = process.env.DEMO_GITHUBAPP_APPID;
+const signing_key = process.env.GITHUBAPP_PRIVATE_KEY;
+const appId = process.env.GITHUBAPP_APPID;
 
 const octokit_app = new Octokit({
     authStrategy: createAppAuth,
