@@ -180,4 +180,4 @@ Number of installations : 3
   - Pushing issue 1374591905
 ````
 
-Go to next section: [6. Kibana](6_KIBANA.md)
+Go to next section: [6 - Visualize results in Kibana](6_KIBANA.md)

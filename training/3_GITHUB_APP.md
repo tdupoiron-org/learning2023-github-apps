@@ -70,4 +70,4 @@ A service-to-service application will authenticate using the app as follow:
 
 4. Use the access token to query the business operations
 
-Go to next section: [4 - Create a GitHub App](4_GITHUB_APP.md)
+Go to next section: [4 - Open repository in a Codespace](4_CODESPACE.md)
