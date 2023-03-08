@@ -9,3 +9,14 @@
 #### [4 - Open repository in a Codespace](training/4_CODESPACE.md)
 
 #### [5 - Explore and execute the Javascript code](training/5_JAVASCRIPT.md)
+
+# Kibana
+
+The goal of this small project is to capture issues into an external dashboard that could be customized by stakeholders to take decisions.
+
+I created a trial account on Elastic Cloud.
+
+* Open the https://learning-pills-mar-2023.kb.eu-west-3.aws.elastic-cloud.com:9243 in a new tab and sign in using the following credentials:
+  * 
+
+  
